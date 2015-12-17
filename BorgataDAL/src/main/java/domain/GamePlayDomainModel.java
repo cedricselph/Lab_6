@@ -21,6 +21,7 @@ public class GamePlayDomainModel {
 	@XmlElement
 	private int NbrOfJokers;
 	@XmlElement
+	
 	private ArrayList<CardDomainModel> WildCards = new ArrayList<CardDomainModel>();
 	
 	public UUID GetGameID()

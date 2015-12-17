@@ -92,7 +92,7 @@ public class PokerTableController {
 	private ImageView imgTransCardP4 = new ImageView();
 	private ImageView imgTransCardCommon = new ImageView();
 	
-	private static Rule rle = new Rule(eGame.FiveStud);
+	private static Rule rle = null;
 
 	public static void setRle(Rule rle) {
 		PokerTableController.rle = rle;
@@ -632,7 +632,7 @@ public class PokerTableController {
 
 		final ImageView ivRemove = imView;
 		seqTrans.setOnFinished(new EventHandler<ActionEvent>() {
-			@Override
+			
 			public void handle(ActionEvent arg0) {
 				APMainScreen.getChildren().remove(ivRemove);
 
@@ -649,7 +649,7 @@ public class PokerTableController {
 		fadeOutTransition.setToValue(0.0);
 		fadeOutTransition.setOnFinished(new EventHandler<ActionEvent>() {
 
-			@Override
+	
 			public void handle(ActionEvent arg0) {
 				iv.setImage(img);
 
